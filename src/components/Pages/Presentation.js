@@ -4,7 +4,7 @@ const Presentation = () => {
     return (
         <>
             <div className="card">
-                <img src="./img/photo.png" className="card-img-top" alt="..."/>
+                <img id="presImg" src="./img/photo.png" className="card-img-top" alt="..."/>
                 <h1>À propos de moi</h1>
                 <div className="card-body">
                     <div className="aboutbox">

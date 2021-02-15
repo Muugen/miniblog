@@ -38,9 +38,10 @@ class Admin extends Component {
                     image: 'Security.jpg'
                 }
             ],
+            result: [],
             editForm: false,
             indexMod: -1,
-            editArt: {id:-1, titre:'', contenue:'', url:'', image:'', auteur:0, disponible:false},
+            editArt: {id:-1, titre:'', contenue:'', url:'', image:'', auteur:''},
          }
     }
 
@@ -63,12 +64,12 @@ class Admin extends Component {
         console.log(index);
 
         let newArticles = [...this.state.articles];
-        let autos = newArticles.filter((v, id) =>{
+        let arts = newArticles.filter((v, id) =>{
             return id !== index;
         });
-        console.log(autos);
+        console.log(arts);
 
-        this.setState({articles:autos},()=>{
+        this.setState({articles:arts},()=>{
             localStorage.setItem('articlesKey', JSON.stringify(this.state.articles));
             console.log(this.state);
         });
@@ -113,7 +114,7 @@ class Admin extends Component {
                
                 {
                     (!this.state.editForm && this.state.indexMod > -1)
-                    ?<Edit autoShared = {this.state.editArt} update = {this.handleUpdate}/>
+                    ?<Edit artshared = {this.state.editArt} update = {this.handleUpdate}/>
                     :
                     (this.state.editForm)
                     ?<Ajout getArticle = {this.handleArt} />

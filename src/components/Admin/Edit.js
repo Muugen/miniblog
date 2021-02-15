@@ -14,9 +14,6 @@ class Edit extends Component {
             contenue:"",
             auteur:"",
             image:"",
-            prix:0,
-            disponible:false
-           
          }
 
          this.state = this.initState;
