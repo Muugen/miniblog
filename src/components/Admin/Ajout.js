@@ -43,7 +43,7 @@ class Ajout extends Component {
 
         this.setState(this.initState);
         toast('Article ajoutée avec succès!', {className:'bg-success text-white fw-bolder'});
-        //window.location.reload(true);
+        // window.location.reload(true);
 
     }
     render() {

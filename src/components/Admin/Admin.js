@@ -38,7 +38,6 @@ class Admin extends Component {
                     image: 'Security.jpg'
                 }
             ],
-            result: [],
             editForm: false,
             indexMod: -1,
             editArt: {id:-1, titre:'', contenue:'', url:'', image:'', auteur:''},

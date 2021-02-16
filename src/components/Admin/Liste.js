@@ -3,10 +3,11 @@ import { FaEdit, FaTrashAlt } from "react-icons/fa";
 // import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 
+
 const Liste = (props) => {
 
     return ( 
-         <> 
+        <> 
         
         <table className="table table-striped text-center">
             <thead className="table-dark">
@@ -15,7 +16,7 @@ const Liste = (props) => {
                 </tr>
             </thead>
             <tbody>
-            {props.lines.map((line, index) =>{
+            {props.lines && props.lines.map((line, index) =>{
                 return (
                         <tr key={index}>
                             <td>{line.id}</td>
@@ -50,6 +51,5 @@ const Liste = (props) => {
         </>
      );
 }
- 
-export default Liste;
 
+export default Liste;

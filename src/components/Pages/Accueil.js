@@ -4,7 +4,20 @@ import HeroSection from '../Navbar/HeroSection';
 
 const Accueil = () => {
 
-    const articles = JSON.parse(localStorage.getItem('articlesKey'));
+    // const articles = JSON.parse(localStorage.getItem('articlesKey'));
+
+    const articles  = JSON.parse(localStorage.getItem('artData'));
+    let val = false ;
+    let tVal = false;
+    if(articles){
+        val = true;
+    }
+    if(val && articles.length > 0){
+
+        tVal = true;
+    }
+
+    console.log(articles);
 
     return (
         <Fragment>
@@ -13,7 +26,7 @@ const Accueil = () => {
             <HeroSection />
             <div className="row">
                 <div className="col-md-12">
-                <div className="row">
+                {/* <div className="row">
                         {articles.map((article) =>{
                             return <div className="col-12">
                                 <div className="card">
@@ -30,8 +43,8 @@ const Accueil = () => {
                                 </div>
                             </div>
                         })}
-                    </div>
-                    {/* <div className="row">
+                    </div> */}
+                    <div className="row">
                         {tVal ? articles.map((article, index) =>{
                             return(
                                 <div id="artCard" className="col-md-6" key={index}>
@@ -52,7 +65,7 @@ const Accueil = () => {
                                 })
                                 : 'Aucun article.'
                             }
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </main>
